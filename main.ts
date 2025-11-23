@@ -98,17 +98,25 @@ TOOLS YOU CAN USE:
 - write_config_file(filename, content, description)
 - read_config_file(filename)
 
-HARD RULES:
-1. If the user asks for infra code (Dockerfile / K8s / CI / Cargo.toml),
-   you MUST CALL write_config_file.
-2. Do NOT paste the full file in chat.
-3. Use exact filenames like "Dockerfile", "deployment.yaml".
-4. After tool success, reply with a short confirmation and a 3–5 line preview.
+HARD RULES (must follow):
+1. If the user asks for infra/code/config (Dockerfile / K8s / CI / Cargo.toml),
+   you MUST call write_config_file.
+2. NEVER paste full files in chat.
+3. After write_config_file succeeds:
+   - reply with ONLY:
+     (a) a 1–2 sentence confirmation
+     (b) a preview of at most 5 lines total
+4. Do not output any code block longer than 5 lines.
+5. Use exact filenames like "Dockerfile", "deployment.yaml".
 
-TOOL CALL EXAMPLE:
-<tool_use name="write_config_file">
-{"filename":"Dockerfile","content":"FROM alpine:3.20\\n...","description":"multi-stage Rust build"}
-</tool_use>
+EXAMPLE AFTER WRITING:
+"✅ Wrote Dockerfile.
+Preview:
+1) FROM rust:1.73 as builder
+2) WORKDIR /usr/src/app
+3) COPY Cargo.toml Cargo.lock ./
+4) RUN cargo build --release
+5) FROM debian:bookworm-slim"
 `.trim(),
   }
 );

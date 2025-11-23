@@ -1,14 +1,9 @@
 {
     "name": "zypher-infra-architect",
     "version": "0.1.0",
+    "exports": "./main.ts",
     "tasks": {
       "start": "deno run -A --env-file=.env main.ts"
-    },
-    "imports": {
-      "@zypher": "jsr:@corespeed/zypher@0.5.1",
-      "@zypher/tools": "jsr:@corespeed/zypher@0.5.1/tools",
-      "@std/path": "jsr:@std/path@1.0.8",
-      "zod": "npm:zod@3.25.67"
     }
   }
   

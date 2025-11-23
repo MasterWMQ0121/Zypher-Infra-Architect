@@ -1,0 +1,23 @@
+# secrets
+.env
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# deno
+deno.lock
+
+# node
+node_modules/
+
+# build artifacts
+dist/
+out/
+*.log
+
+# optional local folders
+.tmp/
+.zypher/
+checkpoints/

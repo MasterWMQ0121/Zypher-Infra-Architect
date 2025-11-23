@@ -9,7 +9,7 @@ import { z } from "npm:zod@3.25.67";
 import { join } from "jsr:@std/path@1.0.8";
 
 /**
- * Zypher Infra-Architect (OpenAI edition)
+ * Zypher Infra-Architect
  *
  * Tools:
  * - write_config_file: create infra files (Dockerfile / K8s YAML / CI)

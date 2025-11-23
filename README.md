@@ -42,12 +42,7 @@ To build Infra-Architect, we need two components:
 
 ---
 
-## Why This Is Relevant to CoreSpeed Roles
-
-CoreSpeed roles emphasize:
-- Kubernetes & cloud-native workflows
-- CI/CD and production reliability
-- dev-experience tooling for infra
+## How it helps
 
 Infra-Architect targets these directly by:
 - bootstrapping Docker/K8s/CI instantly
